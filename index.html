@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mueblería Araya | Muebles a la Medida y Fabricación</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Encabezado y Navegación -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo-link" onclick="showView('inicio'); return false;">
+        <img src="imgs/WhatsApp Image 2026-09-07 at 5.27.56 PM.jpeg" alt="Mueblería Araya Logo" class="logo-img">
+      </a>
+      
+      <nav class="nav-menu">
+        <button type="button" class="nav-link active" onclick="showView('inicio')" data-i18n="nav_inicio">Inicio</button>
+        <button type="button" class="nav-link" onclick="showView('galeria')" data-i18n="nav_proyectos">Proyectos</button>
+        <button type="button" class="nav-link" onclick="showView('trayectoria')" data-i18n="nav_historia">Historia y Taller</button>
+        <button type="button" class="nav-link cta-link" onclick="showView('cotizador')" data-i18n="nav_cotizador">Cotizador</button>
+      </nav>
+
+      <div class="nav-right">
+        <!-- Switcher de Idioma -->
+        <div class="lang-switch">
+          <button type="button" id="btn-es" class="lang-btn active" onclick="setLanguage('es')">ES</button>
+          <span class="lang-divider">|</span>
+          <button type="button" id="btn-en" class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+        <div class="nav-social">
+          <a href="https://instagram.com/muebleriaaraya" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/muebleria.araya" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- VISTA 1: INICIO -->
+  <main id="view-inicio" class="view-panel active">
+    <section class="hero">
+      <div class="hero-text">
+        <span class="badge" data-i18n="hero_badge">Ebanistería fina y tecnología CNC</span>
+        <h1 data-i18n="hero_title">Calidad que se ve, elegancia que se siente</h1>
+        <p data-i18n="hero_desc">Transformamos sus espacios con mobiliario modular a la medida, sobres de cuarzo y acabados de alta durabilidad en Costa Rica.</p>
+        <div class="hero-buttons">
+          <button type="button" class="btn btn-gold" onclick="showView('cotizador')" data-i18n="hero_btn_quote">Calcular Presupuesto</button>
+          <button type="button" class="btn btn-outline" onclick="showView('galeria')" data-i18n="hero_btn_gallery">Ver Trabajos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Institucional -->
+    <section class="container section-padding">
+      <div class="video-container">
+        <div class="section-header text-center">
+          <h2 data-i18n="video_title">Precisión en Cada Detalle</h2>
+          <p data-i18n="video_desc">Mobiliario fabricado con estrictos estándares de calidad y ajuste exacto para su hogar.</p>
+        </div>
+        <div class="video-card">
+          <video controls poster="imgs/muebleria-araya-cocina-isla-cuarzo.jpg">
+            <source src="imgs/Video muebleria.mp4" type="video/mp4">
+            Su navegador no admite la reproducción de video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pilares de Valor -->
+    <section class="container section-padding grid-3">
+      <div class="feature-box">
+        <i class="fa-solid fa-ruler-combined"></i>
+        <h3 data-i18n="feat_1_title">Co-creación a la Medida</h3>
+        <p data-i18n="feat_1_desc">Diseñamos en conjunto cada área de su hogar para asegurar máxima funcionalidad y armonía con sus electrodomésticos empotrados.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fa-solid fa-gem"></i>
+        <h3 data-i18n="feat_2_title">Sobres de Cuarzo y Granito</h3>
+        <p data-i18n="feat_2_desc">Materiales resistentes a altas exigencias con acabados pulidos y ajustes precisos de fregaderos y plantillas.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fa-solid fa-truck-ramp-box"></i>
+        <h3 data-i18n="feat_3_title">Instalación y Ajuste Directo</h3>
+        <p data-i18n="feat_3_desc">Servicio integral desde el despiece en taller computarizado hasta el montaje final en toda la GAM.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- VISTA 2: PROYECTOS / GALERÍA -->
+  <main id="view-galeria" class="view-panel">
+    <section class="container section-padding">
+      <div class="section-header text-center">
+        <h2 data-i18n="gallery_title">Catálogo de Proyectos Realizados</h2>
+        <p data-i18n="gallery_subtitle">Ejemplos reales de cocinas, muebles aéreos, clósets y áreas integradas.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-item">
+          <img src="imgs/muebleria-araya-cocina-isla-cuarzo.jpg" alt="Cocina moderna grafito con isla">
+          <div class="project-details">
+            <h3 data-i18n="card_1_title">Cocina Moderna Grafito con Isla</h3>
+            <p data-i18n="card_1_desc">Muebles inferiores y aéreos en tono carbón mate, complementados con isla y sobre de cuarzo blanco puro.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <img src="imgs/mueblecocina2.jpg" alt="Cocina contemporánea bicolor">
+          <div class="project-details">
+            <h3 data-i18n="card_2_title">Cocina Bicolor de Alto Tránsito</h3>
+            <p data-i18n="card_2_desc">Combinación blanco brillante y grafito, integración de torre de hornos y sobre de granito gris veteado.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <img src="imgs/muebleria-araya-cocina-oscura-isla.jpg" alt="Cocina wengué con desayunador">
+          <div class="project-details">
+            <h3 data-i18n="card_3_title">Cocina Wengué con Desayunador</h3>
+            <p data-i18n="card_3_desc">Distribución en L para máxima capacidad de almacenamiento con desayunador en granito claro.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <img src="imgs/muebleria-araya-cocina-clasica-granito.jpg" alt="Cocina en melamina textura madera clara">
+          <div class="project-details">
+            <h3 data-i18n="card_4_title">Cocina en Melamina Texturizada</h3>
+            <p data-i18n="card_4_desc">Tono madera nórdica con salpicadero decorativo hexagonal y nicho aéreo para microondas.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <img src="imgs/mueblecocina.jpg" alt="Cocina clásica en L">
+          <div class="project-details">
+            <h3 data-i18n="card_5_title">Mueble de Cocina en L Roble</h3>
+            <p data-i18n="card_5_desc">Optimización lineal de esquinas, encimera de piedra oscura y compartimentos con tiradores cromados.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <img src="imgs/muebleria-araya-closet-wengue.jpg" alt="Ropero empotrado de pared a pared">
+          <div class="project-details">
+            <h3 data-i18n="card_6_title">Ropero Empotrado de Pared a Pared</h3>
+            <p data-i18n="card_6_desc">Solución modular con maleteros superiores, gaveteros integrados y puertas abatibles de piso a cielo.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <img src="imgs/muebleria-araya-closet-vestidor.jpg" alt="Walk-in closet modular">
+          <div class="project-details">
+            <h3 data-i18n="card_7_title">Walk-in Closet Modular Blanco</h3>
+            <p data-i18n="card_7_desc">Cajonería central doble, compartimentos superiores abiertos y rieles reforzados para ropa corta y larga.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <img src="imgs/muebleria-araya-instalacion-cocina.jpg" alt="Módulo de clóset abierto">
+          <div class="project-details">
+            <h3 data-i18n="card_8_title">Clóset Modular Wengué Abierto</h3>
+            <p data-i18n="card_8_desc">Estructura independiente para habitación con repisas laterales y gavetas inferiores de cierre suave.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- VISTA 3: TRAYECTORIA Y VALORES -->
+  <main id="view-trayectoria" class="view-panel">
+    <section class="container section-padding">
+      <div class="about-flex">
+        <div class="about-img-box">
+          <img src="imgs/muebleria-araya-don-alfredo-taller.jpg" alt="Don Alfredo Araya en taller">
+          <div class="caption-tag" data-i18n="caption_taller">Don Alfredo Araya | Pasión y precisión técnica en taller</div>
+        </div>
+        <div class="about-description">
+          <span class="badge" data-i18n="since_badge">Desde 1994</span>
+          <h2 data-i18n="about_title">Tres Generaciones de Tradición en Madera</h2>
+          <p data-i18n="about_p1">El oficio ebanista de la familia inició con José Antonio Araya, artesano dedicado a construir instrumentos de cuerda como violines, contrabajos y guitarras[cite: 1, 5]. La exactitud de ese trabajo manual pasó a su hijo y luego a Alfredo Araya Carvajal, quien comenzó en el taller desde los 13 años[cite: 1, 5].</p>
+          <p data-i18n="about_p2">En 1994 nace oficialmente Mueblería Araya como un taller enfocado en resolver necesidades de diseño a la medida en los hogares costarricenses[cite: 1, 5]. Hoy combinamos esa herencia artesanal con maquinaria de corte computarizado (CNC) para garantizar acabados milimétricos[cite: 1, 5].</p>
+        </div>
+      </div>
+
+      <div class="grid-2 mt-5">
+        <div class="info-card">
+          <h3 data-i18n="mision_title">Misión</h3>
+          <p data-i18n="mision_desc">Ofrecer soluciones de mobiliario de alta calidad y funcionalidad, adaptadas a las necesidades y gustos de nuestra clientela[cite: 1, 5]. Nuestros muebles transforman los espacios de su hogar mediante la combinación de elegancia, durabilidad y accesibilidad[cite: 1, 5].</p>
+        </div>
+        <div class="info-card">
+          <h3 data-i18n="vision_title">Visión</h3>
+          <p data-i18n="vision_desc">Ser reconocidos como el referente en mobiliario para el hogar de mayor calidad y accesibilidad[cite: 1, 5]. Innovamos en técnicas sostenibles y cuidamos cada acabado para respaldar la confianza y satisfacción total de nuestros clientes[cite: 1, 5].</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- VISTA 4: COTIZADOR INTERACTIVO -->
+  <main id="view-cotizador" class="view-panel">
+    <section class="container section-padding">
+      <div class="calculator-wrapper">
+        <div class="section-header text-center">
+          <h2 data-i18n="calc_title">Cotizador Interactivo de Muebles</h2>
+          <p data-i18n="calc_subtitle">Configure las medidas y elementos según su espacio. Los valores se basan en nuestra lista oficial de tarifas en taller.</p>
+        </div>
+
+        <form id="quote-form">
+          <div class="quote-block">
+            <h3 data-i18n="calc_step1">1. Línea Principal de Mobiliario</h3>
+            <div class="form-row">
+              <div class="form-col">
+                <label for="item-base" data-i18n="lbl_elem_principal">Elemento principal:</label>
+                <select id="item-base">
+                  <option value="none" data-type="unit" data-price="0" data-i18n-opt="opt_none">-- No incluir o solo complementos --</option>
+                  <option value="remodelacion" data-type="unit" data-price="250000" data-i18n-opt="opt_remod">Remodelación de cocina (Desde ₡250,000)</option>
+                  <option value="mueble-abajo-cuarzo" data-type="linear" data-price="240000" data-i18n-opt="opt_abajo" selected>Mueble abajo con sobre de cuarzo (₡240,000 / m lineal)</option>
+                  <option value="mueble-aereo" data-type="linear" data-price="80000" data-i18n-opt="opt_aereo">Mueble aéreo de cocina / pilas (₡80,000 / m lineal)</option>
+                  <option value="closet" data-type="linear" data-price="230000" data-i18n-opt="opt_closet">Clósets - hasta 2.40 m alto (₡230,000 / m lineal)</option>
+                  <option value="walkin" data-type="linear" data-price="180000" data-i18n-opt="opt_walkin">Walk-in closet - hasta 2.00 m alto (₡180,000 / m lineal)</option>
+                  <option value="mueble-bano-cuarzo" data-type="unit" data-price="140000" data-i18n-opt="opt_bano">Mueble de baño con sobre de cuarzo 60 cm (₡140,000)</option>
+                  <option value="muebles-partir" data-type="unit" data-price="150000" data-i18n-opt="opt_medida">Mueble especial a medida (Desde ₡150,000)</option>
+                </select>
+              </div>
+
+              <div class="form-col" id="col-longitud">
+                <label for="longitud-metros"><span data-i18n="lbl_longitud">Longitud requerida:</span> <strong id="val-longitud">2.0</strong> <span data-i18n="lbl_metros">metros</span></label>
+                <input type="range" id="longitud-metros" min="1" max="8" step="0.5" value="2.0">
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-block">
+            <h3 data-i18n="calc_step2">2. Módulos Adicionales y Complementos</h3>
+            <div class="checkbox-grid">
+              <label class="check-container">
+                <input type="checkbox" id="add-aereo" data-price="80000" data-apply-length="true" data-i18n-key="chk_aereo">
+                <span data-i18n="chk_aereo">Mueble aéreo superior cocina/pilas (+₡80,000 / m lineal)</span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="add-torre" data-price="190000" data-i18n-key="chk_torre">
+                <span data-i18n="chk_torre">Torre de hornos (+₡190,000 unidad)</span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="add-alacena" data-price="170000" data-i18n-key="chk_alacena">
+                <span data-i18n="chk_alacena">Alacena grande (+₡170,000 unidad)</span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="add-bano" data-price="140000" data-i18n-key="chk_bano">
+                <span data-i18n="chk_bano">Mueble de baño c/sobre cuarzo 60 cm (+₡140,000 unidad)</span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="add-veladora-sin" data-price="30000" data-i18n-key="chk_vel_sin">
+                <span data-i18n="chk_vel_sin">Veladora sin gaveta (+₡30,000 unidad)</span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="add-veladora-con" data-price="40000" data-i18n-key="chk_vel_con">
+                <span data-i18n="chk_vel_con">Veladora con gaveta (+₡40,000 unidad)</span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="add-vanity-4" data-price="180000" data-i18n-key="chk_vanity_4">
+                <span data-i18n="chk_vanity_4">Vanity de 4 gavetas (+₡180,000 unidad)</span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="add-vanity-8" data-price="300000" data-i18n-key="chk_vanity_8">
+                <span data-i18n="chk_vanity_8">Vanity de 8 gavetas (+₡300,000 unidad)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="quote-block">
+            <h3 data-i18n="calc_step3">3. Datos para la Cita de Medición</h3>
+            <div class="form-row">
+              <div class="form-col">
+                <label for="cliente-nombre" data-i18n="lbl_nombre">Nombre y Apellido:</label>
+                <input type="text" id="cliente-nombre" placeholder="Ej: María Rodríguez" data-i18n-ph="ph_nombre" required>
+              </div>
+              <div class="form-col">
+                <label for="cliente-canton" data-i18n="lbl_ubicacion">Ubicación / Cantón:</label>
+                <input type="text" id="cliente-canton" placeholder="Ej: Curridabat, San Pedro, Escazú..." data-i18n-ph="ph_ubicacion" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <label for="cliente-detalles" data-i18n="lbl_notas">Notas o requerimientos específicos (opcional):</label>
+              <textarea id="cliente-detalles" rows="2" placeholder="Indique si requiere adaptación para plantilla, lavaplatos o medidas específicas." data-i18n-ph="ph_notas"></textarea>
+            </div>
+          </div>
+
+          <!-- Total y Envío -->
+          <div class="quote-summary-card">
+            <div class="total-display">
+              <span data-i18n="lbl_total_estimado">Total Estimado de Referencia:</span>
+              <span class="amount" id="total-amount">₡480,000</span>
+            </div>
+            <p class="summary-disclaimer" data-i18n="calc_disclaimer">Precios correspondientes al tarifario de taller. Los montos finales se ajustan con las medidas exactas tomadas en su vivienda sin costo adicional en la GAM.</p>
+            <button type="submit" id="btn-submit-whatsapp" class="btn btn-whatsapp-full">
+              <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn_enviar_wa">Enviar Cotización por WhatsApp (+506 7279 0560)</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <img src="imgs/WhatsApp Image 2026-09-07 at 5.27.56 PM.jpeg" alt="Mueblería Araya Logo" class="footer-logo">
+        <p data-i18n="footer_brand_desc">Ebanistería fina familiar y muebles a la medida para todo Costa Rica[cite: 1, 5].</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact_title">Contacto Rápido</h4>
+        <p><i class="fa-solid fa-phone"></i> +506 7279 0560</p>
+        <p><i class="fa-solid fa-envelope"></i> ventas@muebleriaarayacr.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="footer_location">Gran Área Metropolitana, Costa Rica</span></p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_social_title">Canales Oficiales</h4>
+        <div class="social-links-footer">
+          <a href="https://instagram.com/muebleriaaraya" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="https://www.facebook.com/muebleria.araya" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          <a href="https://wa.me/50672790560" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p data-i18n="footer_copy">&copy; 2026 Mueblería Araya | muebleriaarayacr.com. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="app/script.js"></script>
+</body>
+</html>
